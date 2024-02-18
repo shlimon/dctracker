@@ -15,8 +15,11 @@ connectDB();
 const app = express(); 
 const PORT = process.env.PORT || 4000; 
 
+const corsOptions ={
+  origin:"http://localhost300"
+}
 
-app.use(cors()); 
+app.use(cors(corsOptions)); 
 
 app.use(express.urlencoded({extended:false})); 
 app.use(express.json()); 
